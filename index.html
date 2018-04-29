@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Metal Perf</title>
+
+	<style>
+	    body {
+			background: #fff;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 15px;
+			line-height: 1.7;
+			margin: 0;
+			padding: 30px;
+	    }
+
+	    a {
+			color: #4183c4;
+			text-decoration: none;
+	    }
+
+	    a:hover {
+			text-decoration: underline;
+	    }
+
+	    h1 {
+			border-bottom: 1px solid #ddd;
+			font-size: 2.0em;
+			font-weight: bold;
+			margin: 0 0 15px;
+			padding: 0;
+	    }
+
+	    button {
+			font-weight: bold;
+			line-height: 2;
+	    }
+  </style>
+</head>
+<body>
+	<h1>Metal.js Perf Demo</h1>
+
+	<metal-demo></metal-demo>
+
+	<script src="./src/App.js"></script>
+	<script>
+		var start = Date.now();
+		var element = document.querySelector('metal-demo');
+
+		function update() {
+			element.setAttribute('elapsed', Date.now() - start);
+			requestAnimationFrame(update);
+		}
+
+		requestAnimationFrame(update);
+	</script>
+</body>
+</html>

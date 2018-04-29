@@ -1,0 +1,20 @@
+{
+	"name": "metal-perf",
+	"version": "1.0.0",
+	"main": "dist/bundle.js",
+	"scripts": {
+		"start": "parcel index.html",
+		"build": "parcel build index.html --no-minify --public-url /"
+	},
+	"license": "ISC",
+	"dependencies": {
+		"metal-jsx": "^2.16.5",
+		"metal-web-component": "^2.16.5"
+	},
+	"devDependencies": {
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-preset-metal-jsx": "^0.0.2",
+		"parcel-bundler": "1.0.3"
+	}
+}
